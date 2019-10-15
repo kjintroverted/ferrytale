@@ -71,7 +71,7 @@ export default IGBackground;
 IGBackground.propTypes = {
   username: PropTypes.string.isRequired,
   quality: PropTypes.number,
-  quality: PropTypes.arrayOf(PropTypes.string)
+  filterOpts: PropTypes.arrayOf(PropTypes.string)
 }
 
 const Container = styled.div`
