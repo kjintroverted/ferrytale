@@ -44,6 +44,7 @@ const IGBackground = ({ username, quality }) => {
     flex-wrap: wrap;
     overflow: hidden;
     border: white solid 10px;
+    border-radius: 30px;
   `
 
   return (
@@ -55,7 +56,6 @@ const IGBackground = ({ username, quality }) => {
           </Tile>
         ))
       }
-
       <Filter />
     </Container>
   )
