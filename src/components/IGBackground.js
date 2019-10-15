@@ -75,11 +75,11 @@ IGBackground.propTypes = {
 }
 
 const Container = styled.div`
-position: fixed;
-width: 100vw;
-height: 100vh;
-display: flex;
-flex-wrap: wrap;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
 `
 
 const Post = styled.img`
