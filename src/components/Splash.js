@@ -31,11 +31,11 @@ const Container = styled.div`
 const Main = styled.h1`
   font-family: "Raleway";
   margin: 10px 0px;
-  font-size: 2.5em;
+  font-size: 4em;
 `
 
 const Text = styled.h3`
   font-family: "Raleway";
   margin: 5px 0px;
-  font-size: 1em;
+  font-size: 1.2em;
 `
