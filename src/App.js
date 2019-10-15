@@ -3,13 +3,14 @@ import styled from 'styled-components';
 
 import './App.css';
 import IGBackground from './components/IGBackground';
+import Splash from './components/Splash';
 
 function App() {
   return (
     <Main>
       <IGBackground username="ferrytalecreative" />
       <Filter />
-
+      <Splash />
     </Main>
   );
 }
