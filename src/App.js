@@ -32,7 +32,6 @@ const Fence = styled.div`
   max-width: 1000px;
   display: flex;
   align-items: center;
-  margin-left: 10px;
 `
 
 const Filter = styled.div`

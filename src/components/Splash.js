@@ -19,7 +19,7 @@ export default Splash;
 
 const Container = styled.div`
   height: 100%;
-  width: 100%;
+  padding: 10px;
   max-width: 500px;
   display: flex;
   flex-direction: column;
