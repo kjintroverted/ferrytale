@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
-const IGBackground = ({ username, quality }) => {
+const IGBackground = ({ username, quality, filterOpts }) => {
 
   const [imageResources, setImages] = useState(null);
   const [imageDims, setImageDims] = useState(0);
@@ -37,6 +37,15 @@ const IGBackground = ({ username, quality }) => {
     flex-grow: 1;
   `
 
+  const filterString = (filterOpts && filterOpts.length) ? filterOpts.join() : null;
+  const Filter = styled.div`
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(${filterString });
+    opacity: .7;
+  `
+
   return (
     <Container>
       { imageResources &&
@@ -46,6 +55,8 @@ const IGBackground = ({ username, quality }) => {
           </Tile>
         ))
       }
+
+      <Filter />
     </Container>
   )
 }

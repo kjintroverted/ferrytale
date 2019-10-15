@@ -8,8 +8,9 @@ import Splash from './components/Splash';
 function App() {
   return (
     <Main>
-      <IGBackground username="ferrytalecreative" />
-      <Filter />
+      <IGBackground
+        username="ferrytalecreative"
+        filterOpts={ ["to bottom right", "teal", "blue", "purple"] } />
       <Fence>
         <Splash />
         <Spacer />
@@ -32,14 +33,6 @@ const Fence = styled.div`
   max-width: 1000px;
   display: flex;
   align-items: center;
-`
-
-const Filter = styled.div`
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  background-image: linear-gradient(to bottom right,teal,blue,purple);
-  opacity: .7;
 `
 
 const Spacer = styled.div`
