@@ -2,11 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 
 import './App.css';
+import IGBackground from './components/IGBackground';
 
 function App() {
   return (
     <Main>
-
+      <IGBackground username="ferrytalecreative" />
       <Filter />
 
     </Main>
