@@ -36,6 +36,6 @@ const Main = styled.h1`
 
 const Text = styled.h3`
   font-family: "Raleway";
-  margin: 5px 0px;
+  margin: 10px 0px;
   font-size: 1.2em;
 `
