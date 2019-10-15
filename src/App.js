@@ -9,7 +9,6 @@ function App() {
   return (
     <Main>
       <IGBackground username="ferrytalecreative" />
-      <Filter />
       <Fence>
         <Splash />
         <Spacer />
@@ -23,6 +22,7 @@ export default App;
 const Main = styled.div`
   display: flex;
   justify-content: center;
+  box-shadow: rgba(0,0,0,.5) 3px 10px;
 `
 
 const Fence = styled.div`
@@ -32,14 +32,6 @@ const Fence = styled.div`
   max-width: 1000px;
   display: flex;
   align-items: center;
-`
-
-const Filter = styled.div`
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  background-image: linear-gradient(to bottom right,teal,blue,purple);
-  opacity: .7;
 `
 
 const Spacer = styled.div`

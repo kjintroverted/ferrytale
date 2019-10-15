@@ -37,6 +37,15 @@ const IGBackground = ({ username, quality }) => {
     flex-grow: 1;
   `
 
+  const Container = styled.div`
+    position: fixed;
+    height: ${imageDims * Math.floor(window.innerHeight / imageDims) }px;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    border: white solid 10px;
+  `
+
   return (
     <Container>
       { imageResources &&
@@ -46,18 +55,20 @@ const IGBackground = ({ username, quality }) => {
           </Tile>
         ))
       }
+
+      <Filter />
     </Container>
   )
 }
 
 export default IGBackground;
 
-const Container = styled.div`
-position: fixed;
-width: 100vw;
-height: 100vh;
-display: flex;
-flex-wrap: wrap;
+const Filter = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to bottom right,teal,blue,purple);
+  opacity: .7;
 `
 
 const Post = styled.img`
