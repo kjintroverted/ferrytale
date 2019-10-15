@@ -10,7 +10,8 @@ function App() {
     <Main>
       <IGBackground
         username="ferrytalecreative"
-        filterOpts={ ["to bottom right", "teal", "blue", "purple"] } />
+        filterOpts={ ["to bottom right", "teal", "blue", "purple"] }
+      />
       <Fence>
         <Splash />
         <Spacer />

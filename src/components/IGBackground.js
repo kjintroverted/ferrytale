@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
-const IGBackground = ({ username, quality, filterOpts }) => {
+const IGBackground = ({ username, quality, filterOpts = [] }) => {
 
   const [imageResources, setImages] = useState(null);
   const [imageDims, setImageDims] = useState(0);
@@ -66,6 +67,12 @@ const IGBackground = ({ username, quality, filterOpts }) => {
 }
 
 export default IGBackground;
+
+IGBackground.propTypes = {
+  username: PropTypes.string.isRequired,
+  quality: PropTypes.number,
+  quality: PropTypes.arrayOf(PropTypes.string)
+}
 
 const Container = styled.div`
 position: fixed;
