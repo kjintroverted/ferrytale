@@ -6,6 +6,7 @@ const IGBackground = ({ username, quality, filterOpts }) => {
   const [imageResources, setImages] = useState(null);
   const [imageDims, setImageDims] = useState(0);
 
+  // CALCULATE HOW WIDE THE TILES SHOULD BE
   function getImageDims() {
     if (!imageResources || !imageResources.length) setImageDims(0);
     else setImageDims(
@@ -13,7 +14,7 @@ const IGBackground = ({ username, quality, filterOpts }) => {
     );
   }
 
-  useEffect(() => {
+  useEffect(() => {  // LOADS POSTS WHEN USERNAME UPDATES
     async function getMedia() {
       if (!username) return;
       const resp = await fetch(`https://www.instagram.com/${ username }/?__a=1`);
@@ -28,21 +29,25 @@ const IGBackground = ({ username, quality, filterOpts }) => {
     getMedia();
   }, [username]);
 
+  // UPDATES TILE DIMENSIONS WHEN IG IMAGES LOAD
   useEffect(getImageDims, [imageResources]);
+  // UPDATES TILE DIMENSIONS WHEN WINDOW RESIZES
   window.addEventListener("resize", getImageDims)
 
+  // PARENT TILE FOR IMAGES
   const Tile = styled.div`
     width: ${imageDims }px;
     height: ${imageDims }px;
     flex-grow: 1;
   `
 
-  const filterString = (filterOpts && filterOpts.length) ? filterOpts.join() : null;
+  // CREATES A FILTER OVER TOP
   const Filter = styled.div`
     position: fixed;
     width: 100vw;
     height: 100vh;
-    background-image: linear-gradient(${filterString });
+    background-color: ${filterOpts }; /* USED IF ONE COLOR PASSED */
+    background-image: linear-gradient(${filterOpts.join() }); /* USED IF GRADIENT OPTS PASSED */
     opacity: .7;
   `
 
@@ -55,7 +60,6 @@ const IGBackground = ({ username, quality, filterOpts }) => {
           </Tile>
         ))
       }
-
       <Filter />
     </Container>
   )
