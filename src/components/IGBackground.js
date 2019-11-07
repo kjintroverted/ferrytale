@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-const IGBackground = ({ username, quality, filterOpts = [] }) => {
+const IGBackground = ({ username, quality, filterOpts = [], offset = 0 }) => {
 
   const [imageResources, setImages] = useState(null);
   const [imageDims, setImageDims] = useState(0);
@@ -35,6 +35,17 @@ const IGBackground = ({ username, quality, filterOpts = [] }) => {
   // UPDATES TILE DIMENSIONS WHEN WINDOW RESIZES
   window.addEventListener("resize", getImageDims)
 
+
+  // ROOT CONTAINER
+  const Container = styled.div`
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: ${offset }px;
+  `
+
   // PARENT TILE FOR IMAGES
   const Tile = styled.div`
     width: ${imageDims }px;
@@ -44,7 +55,7 @@ const IGBackground = ({ username, quality, filterOpts = [] }) => {
 
   // CREATES A FILTER OVER TOP
   const Filter = styled.div`
-    position: fixed;
+    position: absolute;
     width: 100vw;
     height: 100vh;
     background-color: ${filterOpts }; /* USED IF ONE COLOR PASSED */
@@ -71,16 +82,9 @@ export default IGBackground;
 IGBackground.propTypes = {
   username: PropTypes.string.isRequired,
   quality: PropTypes.number,
-  filterOpts: PropTypes.arrayOf(PropTypes.string)
+  filterOpts: PropTypes.arrayOf(PropTypes.string),
+  offset: PropTypes.number
 }
-
-const Container = styled.div`
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  flex-wrap: wrap;
-`
 
 const Post = styled.img`
   height: 100%;

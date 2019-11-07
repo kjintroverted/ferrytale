@@ -6,8 +6,12 @@ const Splash = () => {
   return (
     <Container>
       <Main>Ferry Tale Creative</Main>
-      <Text>Thanks for stopping by. To stay current on the launch of our product follow us on instagram.</Text>
-      <Text>Our store will open at the end of October so check back soon and get ready for your own pair of these awesome ears.</Text>
+      <Text>The fun has arrived! Thank you very much.</Text>
+      <Text>Check out our shop and follow us on Instagram for all the latest news.</Text>
+
+      <Button variant="outlined" color="inherit" href="https://www.etsy.com/shop/FerryTaleCreative">
+        Shop now!
+      </Button>
       <Button variant="outlined" color="inherit" href="https://instagram.com/ferrytalecreative">
         @ferrytalecreative
       </Button>

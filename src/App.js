@@ -1,41 +1,47 @@
 import React from 'react';
+import { AppBar, Toolbar, IconButton, Typography } from '@material-ui/core';
 import styled from 'styled-components';
 
 import './App.css';
 import IGBackground from './components/IGBackground';
-import Splash from './components/Splash';
 
 function App() {
   return (
-    <Main>
+    <Content>
+      <AppBar color="default">
+        <Toolbar>
+          {/* <IconButton edge="start" color="inherit" aria-label="menu">
+            <i className="material-icons">menu</i>
+          </IconButton> */}
+          <Typography variant="h6">
+            Ferry Tale Creative
+          </Typography>
+          <Spacer />
+          <IconButton href="https://etsy.com/shop/FerryTaleCreative">
+            <i className="material-icons">shopping_cart</i>
+          </IconButton>
+        </Toolbar>
+      </AppBar>
       <IGBackground
         username="ferrytalecreative"
         filterOpts={ ["to bottom right", "teal", "blue", "purple"] }
+        offset={ 65 }
       />
-      <Fence>
-        <Splash />
-        <Spacer />
-      </Fence>
-    </Main>
+      <Banner>
+
+      </Banner>
+    </Content>
   );
 }
 
 export default App;
 
-const Main = styled.div`
-  display: flex;
-  justify-content: center;
+const Content = styled.div``
+
+const Banner = styled.div`
+  position:
 `
 
-const Fence = styled.div`
-  position: fixed;
-  height: 100vh;
-  width: 100%;
-  max-width: 1000px;
-  display: flex;
-  align-items: center;
-`
-
-const Spacer = styled.div`
+const Spacer = styled.span`
   flex: 1;
 `
