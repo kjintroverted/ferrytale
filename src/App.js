@@ -10,9 +10,11 @@ function App() {
     <Content>
       <AppBar color="default">
         <Toolbar>
-          {/* <IconButton edge="start" color="inherit" aria-label="menu">
-            <i className="material-icons">menu</i>
-          </IconButton> */}
+          <Logo>
+            <img
+              src="https://cdn.discordapp.com/attachments/365602656812793857/643909979467808808/logos_ftc_textless.png"
+              alt="ftc_logo" />
+          </Logo>
           <Typography variant="h6">
             Ferry Tale Creative
           </Typography>
@@ -57,55 +59,60 @@ export default App;
 const Content = styled.div``
 
 const Banner = styled.div`
-  height: 95vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`
+      height: 95vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    `
 
 const Feature = styled.div`
-  width: 90%;
-  max-width: 700px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
-`
+      width: 90%;
+      max-width: 700px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+    `
 
 const Billboard = styled.div`
-  color: white;
-  background: rgba(0, 0, 0, .2);
-  padding-left: 10px;
-  padding-bottom: 10px;
-  border-left: white solid;
-`
+      color: white;
+      background: rgba(0, 0, 0, .2);
+      padding-left: 10px;
+      padding-bottom: 10px;
+      border-left: white solid;
+    `
 
 const Details = styled.div`
-  width: 90%;
-  max-width: 600px;
-  color: white;
-  margin-top: 50px;
-  text-align: justify;
-`
+      width: 90%;
+      max-width: 600px;
+      color: white;
+      margin-top: 50px;
+      text-align: justify;
+    `
 
 const Footer = styled.div`
-  min-height: 300px;
-  background-color: white;
-  display: flex;
-  justify-content: center;
+      min-height: 200px;
+      background-color: white;
+      display: flex;
+      justify-content: center;
   & h4 {
-    margin: 15px 0px;
-  }
+        margin: 15px 0px;
+    }
   & p {
-    margin: 5px 0px;
-  }
-`
+        opacity: .7;
+        margin: 5px 0px;
+    }
+  `
 
 const Contact = styled.div`
-  width: 90%;
-  max-width: 700px;
-`
+    width: 90%;
+    max-width: 700px;
+  `
 
 const Spacer = styled.span`
-  flex: 1;
+    flex: 1;
+`
+
+const Logo = styled.span`
+    width: 40px;
 `
