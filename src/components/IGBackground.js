@@ -6,6 +6,7 @@ const IGBackground = ({ username, quality, filterOpts = [], offset = 0 }) => {
 
   const [imageResources, setImages] = useState(null);
   const [imageDims, setImageDims] = useState(0);
+  const [topOffSet, setOffSet] = useState(offset);
 
   // CALCULATE HOW WIDE THE TILES SHOULD BE
   function getImageDims() {
@@ -34,6 +35,7 @@ const IGBackground = ({ username, quality, filterOpts = [], offset = 0 }) => {
   useEffect(getImageDims, [imageResources]);
   // UPDATES TILE DIMENSIONS WHEN WINDOW RESIZES
   window.addEventListener("resize", getImageDims)
+  window.addEventListener("scroll", () => setOffSet(offset - window.scrollY / 5))
 
 
   // ROOT CONTAINER
@@ -43,7 +45,7 @@ const IGBackground = ({ username, quality, filterOpts = [], offset = 0 }) => {
     height: 100vh;
     display: flex;
     flex-wrap: wrap;
-    margin-top: ${offset }px;
+    margin-top: ${topOffSet }px;
   `
 
   // PARENT TILE FOR IMAGES
