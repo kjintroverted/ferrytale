@@ -1,12 +1,25 @@
 #root {
-	font-family: 'Raleway';
+  font-family: "Raleway";
 }
 
 #root .MuiButton-label {
-	text-transform: initial;
-	font-size: 1.3em;
+  text-transform: initial;
+  font-size: 1.3em;
 }
 
 div {
-	position: relative;
+  position: relative;
+}
+
+img {
+  width: 100%;
+}
+
+#root button,
+#root .MuiButton-label {
+  text-transform: uppercase;
+}
+
+a {
+  text-decoration: none;
 }
