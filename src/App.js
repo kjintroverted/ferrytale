@@ -33,13 +33,13 @@ function App() {
         <Feature>
           <Billboard>
             <h1>The store is <b>LIVE!</b></h1>
-            <h3>Some subtitle.</h3>
+            <h3>To shop our limited selection, check out our <a href="https://etsy.com/shop/FerryTaleCreative">Etsy Shop</a></h3>
           </Billboard>
           <Details>
-            <p>Butcher poke coloring book, authentic mixtape lumbersexual franzen food truck fanny pack single-origin coffee skateboard. Butcher lo-fi enamel pin gastropub, plaid lomo poutine taiyaki chicharrones hell of cray. 8-bit hell of lo-fi 3 wolf moon heirloom fixie typewriter mustache jianbing, DIY gentrify chambray.</p>
             <Button variant="contained" color="secondary" href="https://etsy.com/shop/FerryTaleCreative">
               Shop now
             </Button>
+            <p>Be sure to check back here in the New Year, January 1, and we will have a full catalog of exciting products for you to check out. Until then we'd love to connect with you so be sure to follow us on Instagram <a href="https://www.instagram.com/ferrytalecreative/">@FerryTaleCreative</a> and check out our contact form in the Connect section if you have a questions or request.</p>
           </Details>
         </Feature>
       </Banner>
@@ -72,6 +72,9 @@ const Feature = styled.div`
       flex-direction: column;
       justify-content: center;
       height: 100%;
+      & a {
+        color: white;
+      }
     `
 
 const Billboard = styled.div`
