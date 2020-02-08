@@ -46,6 +46,7 @@ const IGBackground = ({ username, quality, filterOpts = [], offset = 0 }) => {
     display: flex;
     flex-wrap: wrap;
     margin-top: ${topOffSet }px;
+    z-index: -1;
   `
 
   // PARENT TILE FOR IMAGES
@@ -59,7 +60,7 @@ const IGBackground = ({ username, quality, filterOpts = [], offset = 0 }) => {
   const Filter = styled.div`
     position: absolute;
     width: 100vw;
-    height: 100vh;
+    height: 150vh;
     background-color: ${filterOpts }; /* USED IF ONE COLOR PASSED */
     background-image: linear-gradient(${filterOpts.join() }); /* USED IF GRADIENT OPTS PASSED */
     opacity: .7;

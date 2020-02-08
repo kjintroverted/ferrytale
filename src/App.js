@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import './App.css';
 import IGBackground from './components/IGBackground';
 import NavBar from './components/NavBar';
+import Catalog from './components/Catalog';
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
         <IGBackground
           username="ferrytalecreative"
           filterOpts={ ["to bottom right", "teal", "blue", "purple"] }
-          offset={ 100 }
+          offset={ 50 }
         />
         <Banner>
           <Feature>
@@ -30,9 +31,7 @@ function App() {
             </Details>
           </Feature>
         </Banner>
-        <section style={ { height: 1000 } }>
-
-        </section>
+        <Catalog />
       </main>
       <Footer>
         <Contact>
@@ -63,7 +62,7 @@ const Feature = styled.div`
       flex-direction: column;
       justify-content: center;
       height: 100%;
-      margin-top: 100px;
+      margin-top: 150px;
       & a {
         color: white;
       }
